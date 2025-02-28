@@ -217,7 +217,7 @@ pub fn print_bencode_obj(obj: BencodeObj, indent: Option<usize>) {
             for (k, v) in d {
                 let i = actual_indent + 2;
                 let k_str = String::from_utf8(k).unwrap();
-                println!("{:i$}{:?}", "", k_str);
+                println!("{:i$}key - {:?}", "", k_str);
                 print_bencode_obj(*v, Some(i));
             }
             println!("{:actual_indent$}}}", "");
